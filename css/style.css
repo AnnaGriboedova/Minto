@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'SamoSansProRegular';
+    src: url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.eot');
+    src: url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.svg#SamoSansPro-Regular') format('svg'),
+    url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.ttf') format('truetype'),
+    url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.woff') format('woff'),
+    url('../asserts/fonts/Samo_Sans_Pro/Samo_Sans_Pro_Regular/SamoSansPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SegoeUIBold';
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.eot');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.woff2') format('woff2');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.svg#SegoeUIBold') format('svg'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.ttf') format('truetype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SegoeUIItalic';
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.eot');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.woff2') format('woff2');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.svg#SegoeUIItalic') format('svg'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.ttf') format('truetype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SegoeUILight';
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.eot');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.woff2') format('woff2');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.svg#SegoeUILight') format('svg'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.ttf') format('truetype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SegoeUIRegular';
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.eot');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.woff2') format('woff2');
+    src: url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.svg#SegoeUIRegular') format('svg'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.ttf') format('truetype'),
+    url('../asserts/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SofiaProLight';
+    src: url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.eot');
+    src: url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.svg#SofiaProLight') format('svg'),
+    url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.ttf') format('truetype'),
+    url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.woff') format('woff'),
+    url('../asserts/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'StRydeRegular';
+    src: url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.eot');
+    src: url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.eot?#iefix') format('embedded-opentype'),
+    url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.svg#StRydeRegular') format('svg'),
+    url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.ttf') format('truetype'),
+    url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.woff') format('woff'),
+    url('../asserts/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    width: 1020px;
+}
