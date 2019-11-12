@@ -9,6 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SegoeUIBold';
     src: url('../assets/fonts/Segoe_UI/Segoe_UI_Bold/SegoeUIBold.eot');
@@ -20,6 +21,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SegoeUIItalic';
     src: url('../assets/fonts/Segoe_UI/Segoe_UI_Italic/SegoeUIItalic.eot');
@@ -31,6 +33,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SegoeUILight';
     src: url('../assets/fonts/Segoe_UI/Segoe_UI_Light/SegoeUILight.eot');
@@ -42,6 +45,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SegoeUIRegular';
     src: url('../assets/fonts/Segoe_UI/Segoe_UI_Regular/SegoeUIRegular.eot');
@@ -53,6 +57,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SofiaProLight';
     src: url('../assets/fonts/Sofia_Pro/Sofia_Pro_Light/SofiaProLight.eot');
@@ -64,6 +69,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'StRydeRegular';
     src: url('../assets/fonts/St_Ryde/St_Ryde_Regular/StRydeRegular.eot');
@@ -76,6 +82,135 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html, body, .wrapper {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex-shrink: 0;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
 .container {
     max-width: 1020px;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/*partners block*/
+.partners {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.partners__titleWrapper {
+    background-image: url("../assets/img/pattern.png");
+    background-repeat: repeat-x;
+    background-position: center 55%;
+}
+
+.partners__title {
+    display: inline-block;
+    color: #000000;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 23px;
+    padding-right: 5px;
+    background: white;
+}
+
+.partners__title_bold {
+    font-weight: 700;
+}
+
+.partners__partnersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border: 0.5px solid rgba(0, 0, 0, 0.11);
+    margin: 40px 0 60px 0;
+}
+
+.partners__partner {
+    display: flex;
+    height: 70px;
+    min-width: 150px;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.11);
+}
+
+.partners__partnerIcon {
+    max-width: 205px;
+    height: 55%;
+    width: 74%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*footer*/
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    min-height: 80px;
+    background: #E8E8E8;
+    border-bottom: 10px solid #82699d;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__copyright {
+    color: #454242;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.footer__socialNetworks {
+    display: flex;
+}
+
+.footer__socialNetwork {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin: 0 20px 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.footer__socialNetwork:last-child {
+    margin-right: 0;
 }
