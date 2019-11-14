@@ -11,40 +11,34 @@ let value = 1;
 const slider__h1 = document.querySelector(".slider__h1");
 const slider__h2 = document.querySelector(".slider__h2");
 
-imgBlock.style.cssText = imgs[count];
-const changeOpacity = (element) => { element.style.cssText = `opacity: ${value.toFixed(1)}`};
+imgBlock.style.cssText = imgs[count]; //set first img
 
-const opacityValuechange = (positive) => {
+const changeOpacity = (element) => { element.style.cssText = `opacity: ${value.toFixed(1)}`};
+const setTimer = (flag) => { const interval = setInterval(() => { isShowText(flag) }, 100);
+      setTimeout(() => { clearInterval(interval) }, 1000);};
+
+const isShowText = (positive) => {
     positive ? value += 0.1 : value -= 0.1;
     changeOpacity(slider__h1);
     changeOpacity(slider__h2);
 };
 
-const textHandler = () => {
-    if (count === 0) {
-        const interval = setInterval(() => {opacityValuechange(true)}, 100);
-        setTimeout(() => {clearInterval(interval)}, 1000);
-    } else if (parseInt(value.toFixed(1)) !== 0) {
-        const interval = setInterval(() => {opacityValuechange(false)}, 100);
-        setTimeout(() => {clearInterval(interval)}, 1000);
-    }
+const timer = () => {
+    if (count === 0) {setTimer(true);}
+    else if (parseInt(value.toFixed(1)) !== 0) {setTimer(false)}
 };
 
 const addCounterLeft = () => {
     count += 1;
-    if (count > 2) {
-        count = 0
-    }
-    textHandler();
+    if (count > 2) {count = 0}
+    timer();
     imgBlock.style.cssText = imgs[count]
 };
 
 const addCounterRight = () => {
     count -= 1;
-    textHandler();
-    if (count < 0) {
-        count = 2
-    }
+    if (count < 0) {count = 2}
+    timer();
     imgBlock.style.cssText = imgs[count]
 };
 
