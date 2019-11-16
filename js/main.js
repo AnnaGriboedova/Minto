@@ -1,57 +1,31 @@
 let leftBtn = document.querySelector(".slider__leftBtn"),
     rightBtn = document.querySelector(".slider__rightBtn"),
-    imgBlock = document.querySelector(".slider-container"),
-    imgs = ["background-image: url(assets/img/Slider/Screenshot_20191113_193921.png);",
-            "background-image: url(assets/img/Slider/12008BODcyjzqLbSxTZwUrCJuiMnQk.jpg);",
-            "background-image: url(assets/img/Slider/pXCdZ1zikC753dbEwkw1YL02ONWTB_87pB5nvgO3f4o.jpg);"],
-    count = 0,
+    slider_container = document.querySelector(".slider-container"),
     initialPoint,
     finalPoint;
-let value = 1;
-const slider__h1 = document.querySelector(".slider__h1");
-const slider__h2 = document.querySelector(".slider__h2");
+let currentSlide = 0;
+let slides = document.querySelectorAll(".slide");
+let arr = Array.from(slides);
 
-imgBlock.style.cssText = imgs[count]; //set first img
-
-const changeOpacity = (element) => { element.style.cssText = `opacity: ${value.toFixed(1)}`};
-const setTimer = (flag) => { const interval = setInterval(() => { isShowText(flag) }, 100);
-      setTimeout(() => { clearInterval(interval) }, 1000);};
-
-const isShowText = (positive) => {
-    positive ? value += 0.1 : value -= 0.1;
-    changeOpacity(slider__h1);
-    changeOpacity(slider__h2);
+const isShowSlide = (right, quantitySlides) => {
+    arr[currentSlide].classList.remove("showing");
+    if (right) {
+        currentSlide !== quantitySlides ? currentSlide += 1 : currentSlide = 0;
+        arr[currentSlide].classList.add("showing")
+    } else {  currentSlide <= 0 ? currentSlide = quantitySlides : currentSlide -= 1;
+              arr[currentSlide].classList.add("showing") }
 };
 
-const timer = () => {
-    if (count === 0) {setTimer(true);}
-    else if (parseInt(value.toFixed(1)) !== 0) {setTimer(false)}
-};
+leftBtn.addEventListener("click", () => {isShowSlide(false, 2)});
+rightBtn.addEventListener("click", () => {isShowSlide(true, 2)});
 
-const addCounterLeft = () => {
-    count += 1;
-    if (count > 2) {count = 0}
-    timer();
-    imgBlock.style.cssText = imgs[count]
-};
-
-const addCounterRight = () => {
-    count -= 1;
-    if (count < 0) {count = 2}
-    timer();
-    imgBlock.style.cssText = imgs[count]
-};
-
-leftBtn.addEventListener("click", addCounterLeft);
-rightBtn.addEventListener("click", addCounterRight);
-
-imgBlock.addEventListener('touchstart', function (event) {
+slider_container.addEventListener('touchstart', function (event) {
     event.preventDefault();
     event.stopPropagation();
     initialPoint = event.changedTouches[0];
 }, false);
 
-imgBlock.addEventListener('touchend', function (event) {
+slider_container.addEventListener('touchend', function (event) {
     event.preventDefault();
     event.stopPropagation();
     finalPoint = event.changedTouches[0];
@@ -60,9 +34,9 @@ imgBlock.addEventListener('touchend', function (event) {
     if (xAbs > 20 || yAbs > 20) {
         if (xAbs > yAbs) {
             if (finalPoint.pageX < initialPoint.pageX) {
-                addCounterLeft()
+                isShowSlide(true, 2)
             } else {
-                addCounterRight()
+                isShowSlide(false, 2)
             }
         }
     }

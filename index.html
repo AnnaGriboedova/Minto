@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/main.js" async></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
     <title>Minto</title>
 </head>
 <body>
@@ -15,10 +15,21 @@
     <main class="main">
         <div class="slider">
             <div class="slider-container">
-                <h1 class="slider__h1">Minto</h1>
-                <h5 class="slider__h2">A minimal web design from cssauthar.com</h5>
-                <img class="slider__leftBtn" src="assets/img/Slider/left.png" alt="button">
-                <img class="slider__rightBtn" src="assets/img/Slider/right.png" alt="button">
+                <div class="slider-btns">
+                    <div class="slider__leftBtn" style="background-image: url(assets/img/Slider/left.png)"></div>
+                    <div class="slider__rightBtn" style="background-image: url(assets/img/Slider/right.png)"></div>
+                </div>
+                <ul id="slider-slides">
+                    <li class="slide showing">
+                        <img src="assets/img/Slider/Screenshot_20191113_193921.png" alt="pic">
+                        <div class="slider-text-wrapper">
+                            <h1 class="slider__h1">Minto</h1>
+                            <h5 class="slider__h2">A minimal web design from cssauthar.com</h5>
+                        </div>
+                    </li>
+                    <li class="slide"><img src="assets/img/Slider/12008BODcyjzqLbSxTZwUrCJuiMnQk.jpg" alt="slide"></li>
+                    <li class="slide"><img src="assets/img/Slider/pXCdZ1zikC753dbEwkw1YL02ONWTB_87pB5nvgO3f4o.jpg" alt="slide"></li>
+                </ul>
             </div>
         </div>
         <div class="about"></div>
