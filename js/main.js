@@ -3,21 +3,22 @@ let leftBtn = document.querySelector(".slider__leftBtn"),
     slider_container = document.querySelector(".slider-container"),
     initialPoint,
     finalPoint;
-let currentSlide = 0;
-let slides = document.querySelectorAll(".slide");
-let arr = Array.from(slides);
+let currentSlideIndex = 0;
+let slides = document.querySelectorAll(".slides_slide");
+let slidesArray = Array.from(slides);
+let lastSlideIndex = slides.length - 1;
 
-const isShowSlide = (right, quantitySlides) => {
-    arr[currentSlide].classList.remove("showing");
+const isShowSlide = (right) => {
+    slidesArray[currentSlideIndex].classList.remove("slides_slide--showing");
     if (right) {
-        currentSlide !== quantitySlides ? currentSlide += 1 : currentSlide = 0;
-        arr[currentSlide].classList.add("showing")
-    } else {  currentSlide <= 0 ? currentSlide = quantitySlides : currentSlide -= 1;
-              arr[currentSlide].classList.add("showing") }
+        currentSlideIndex !== lastSlideIndex ? currentSlideIndex += 1 : currentSlideIndex = 0;
+        slidesArray[currentSlideIndex].classList.add("slides_slide--showing")
+    } else {  currentSlideIndex <= 0 ? currentSlideIndex = lastSlideIndex : currentSlideIndex -= 1;
+              slidesArray[currentSlideIndex].classList.add("slides_slide--showing") }
 };
 
-leftBtn.addEventListener("click", () => {isShowSlide(false, 2)});
-rightBtn.addEventListener("click", () => {isShowSlide(true, 2)});
+leftBtn.addEventListener("click", () => {isShowSlide(false)});
+rightBtn.addEventListener("click", () => {isShowSlide(true)});
 
 slider_container.addEventListener('touchstart', function (event) {
     event.preventDefault();
@@ -34,9 +35,9 @@ slider_container.addEventListener('touchend', function (event) {
     if (xAbs > 20 || yAbs > 20) {
         if (xAbs > yAbs) {
             if (finalPoint.pageX < initialPoint.pageX) {
-                isShowSlide(true, 2)
+                isShowSlide(true)
             } else {
-                isShowSlide(false, 2)
+                isShowSlide(false)
             }
         }
     }
