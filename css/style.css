@@ -383,6 +383,7 @@ body {
 }
 
 .about_buttonMoreInfo {
+    text-decoration: none;
     color: #82699d;
     font-family: "SegoeUIItalic", sans-serif;
     font-size: 13px;
