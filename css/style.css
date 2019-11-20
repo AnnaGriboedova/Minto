@@ -427,5 +427,11 @@ body {
     .slider__slideSubtitle {
         font-size: 18px;
     }
+
+    .about__headInfo{
+        padding: 15px;
+        font-size: 17px;
+        line-height: 1.5em;
+    }
 }
 
