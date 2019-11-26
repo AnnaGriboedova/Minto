@@ -421,13 +421,12 @@ body {
 
 .header__logo h1{
     color: #a292b3;
-    font-family: 'SamoSansProRegular';
+    font-family: 'SamoSansProRegular', sans-serif;
     font-size: 39px;
     font-weight: 400;
     text-transform: uppercase;
     padding-left: 20px;
 }
-
 
 .header__menu{
     display: flex;
@@ -442,8 +441,11 @@ body {
     font-size: 19px;
     font-weight: 400;
     font-family: 'segoe ui';
-    font-weight: normal;
-    margin-left: 65px;
+    margin-left: 80px;
+}
+.header__itemIcon{
+    background-position: 55px center;
+    background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1080px) {
