@@ -436,17 +436,24 @@ body {
 }
 
 .header__menu a{
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #545454;
     font-size: 19px;
     font-weight: 400;
-    font-family: 'segoe ui';
+    font-family: 'segoe ui', sans-serif;
     margin-left: 80px;
 }
-.header__itemIcon{
-    background-position: 55px center;
-    background-repeat: no-repeat;
+.header__itemIcon {
+    display: inline-block;
+background: no-repeat center;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
 }
+
+
 
 @media screen and (max-width: 1080px) {
     .container {
