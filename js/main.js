@@ -31,14 +31,11 @@ slider_container.addEventListener('touchend', function (event) {
     event.stopPropagation();
     finalPoint = event.changedTouches[0];
     let xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-    let yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-    if (xAbs > 20 || yAbs > 20) {
-        if (xAbs > yAbs) {
+    if (xAbs > 20) {
             if (finalPoint.pageX < initialPoint.pageX) {
                 isShowSlide(true)
             } else {
                 isShowSlide(false)
             }
-        }
     }
 }, false);
