@@ -21,17 +21,16 @@ leftBtn.addEventListener("click", () => {isShowSlide(false)});
 rightBtn.addEventListener("click", () => {isShowSlide(true)});
 
 slider_container.addEventListener('touchstart', function (event) {
-    event.preventDefault();
     event.stopPropagation();
     initialPoint = event.changedTouches[0];
 }, false);
 
 slider_container.addEventListener('touchend', function (event) {
-    event.preventDefault();
     event.stopPropagation();
     finalPoint = event.changedTouches[0];
+    let yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
     let xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-    if (xAbs > 20) {
+    if (xAbs > 20 || yAbs > 40) {
             if (finalPoint.pageX < initialPoint.pageX) {
                 isShowSlide(true)
             } else {
