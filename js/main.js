@@ -28,9 +28,8 @@ slider_container.addEventListener('touchstart', function (event) {
 slider_container.addEventListener('touchend', function (event) {
     event.stopPropagation();
     finalPoint = event.changedTouches[0];
-    let yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
     let xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-    if (xAbs > 20 || yAbs > 40) {
+    if (xAbs > 20) {
             if (finalPoint.pageX < initialPoint.pageX) {
                 isShowSlide(true)
             } else {
