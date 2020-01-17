@@ -27,7 +27,7 @@
                 <a href="#">
                             <span class="header__itemIcon" style="background-image: url(assets/img/Header/icon3.png)"></span>Services
                 </a>
-                <a href="#">
+                <a href="#" class="buttonModal">
                             <span class="header__itemIcon" style="background-image: url(assets/img/Header/icon4.png)"></span>Contact Us
                 </a>
             </nav>
@@ -118,6 +118,39 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">      
+      <div class="modal-popul">        
+        <div class="modal-cancel"><p>&times;</p></div>
+        <form name="modalForm" action="" method="post">       
+          <div class="user-info">            
+            <div class="user-names">             
+              <div class="user-name">               
+                <input type="text" placeholder="Имя">
+              </div>
+              <div class="user-surname">               
+                <input type="text" placeholder="Фамилия">
+              </div>  
+            </div>
+            <div class="user-contacts">              
+              <div class="user-phone">                
+                <input type="text" placeholder="Телефон">              
+              </div>
+              <div class="user-mail">               
+                <input type="email" placeholder="E-mail">    
+              </div>  
+            </div>
+          </div>
+          <div class="user-text">           
+            <textarea rows="5" cols="30" name="user-text">Текст сообщения</textarea></p>            
+          </div>
+          <div class="modal-submit">
+            <p><input  type="submit" value="Отправить" onclick="return false"></p>
+          </div>
+        </form>
+        
+      </div>
+    </div>
 </div>
 </body>
 </html>

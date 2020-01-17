@@ -37,3 +37,16 @@ slider_container.addEventListener('touchend', function (event) {
             }
     }
 }, false);
+
+let modal = document.querySelector('.modal');
+let buttonModal = document.querySelector('.buttonModal'); 
+let cancel = document.querySelector('.modal-cancel');
+
+buttonModal.addEventListener('click', () => {modal.style.display = 'flex'});
+
+cancel.addEventListener('click', () => {modal.style.display = 'none'});
+
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+       modal.style.display = 'none';} 
+    });
