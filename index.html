@@ -124,31 +124,30 @@
         <div class="modal-cancel"><p>&times;</p></div>
         <form name="modalForm" action="" method="post">       
           <div class="user-info">            
-            <div class="user-names">             
-              <div class="user-name">               
-                <input type="text" placeholder="Имя">
+            <div class="user-info__names">             
+              <div class="user-info__name">               
+                <input type="text" placeholder="Имя" required>
               </div>
-              <div class="user-surname">               
-                <input type="text" placeholder="Фамилия">
+              <div class="user-info__surname">               
+                <input type="text" placeholder="Фамилия" required>
               </div>  
             </div>
-            <div class="user-contacts">              
-              <div class="user-phone">                
-                <input type="text" placeholder="Телефон">              
+            <div class="user-info__contacts">              
+              <div class="user-info__phone">                
+                <input type="text" placeholder="Телефон" required>              
               </div>
-              <div class="user-mail">               
+              <div class="user-info__mail">               
                 <input type="email" placeholder="E-mail">    
               </div>  
             </div>
           </div>
           <div class="user-text">           
-            <textarea rows="5" cols="30" name="user-text">Текст сообщения</textarea></p>            
+            <textarea rows="5" cols="30" name="user-text" placeholder="Текст сообщения"></textarea>            
           </div>
           <div class="modal-submit">
-            <p><input  type="submit" value="Отправить" onclick="return false"></p>
+            <input type="submit" value="Отправить" onclick="return false">
           </div>
         </form>
-        
       </div>
     </div>
 </div>
