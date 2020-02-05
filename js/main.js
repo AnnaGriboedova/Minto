@@ -38,15 +38,43 @@ slider_container.addEventListener('touchend', function (event) {
     }
 }, false);
 
-let modal = document.querySelector('.modal');
-let buttonModal = document.querySelector('.buttonModal'); 
-let cancel = document.querySelector('.modalCancel');
+// *** modal popup ***
 
-buttonModal.addEventListener('click', () => {modal.style.display = 'flex'});
+const modal = document.querySelector('.modal');
+const buttonModal = document.querySelector('.buttonModal'); 
+const cancel = document.querySelector('.modalCancel');
+const modalForm = document.querySelector('.modalForm');
+
+//show modal popup, block scroll and set focus on the first input
+buttonModal.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    document.body.style.overflowY = 'hidden';
+    modalForm.elements[0].focus();
+});
 
 cancel.addEventListener('click', () => {modal.style.display = 'none'});
 
 window.addEventListener('click', (event) => {
     if (event.target === modal) {
-       modal.style.display = 'none';} 
-    });
+       modal.style.display = 'none';
+       document.body.style.overflowY = '';
+    }}
+);
+
+// set cursor switching only in modal window
+const firstFocusElement = modalForm.elements[0];
+const lastFocusElement = modalForm.elements[modalForm.elements.length - 1];
+
+lastFocusElement.onkeydown = function(e) {
+    if (e.key == 'Tab' && !e.shiftKey) {
+        firstFocusElement.focus();
+        return false;
+    }
+};
+
+firstFocusElement.onkeydown = function(e) {
+    if (e.key == 'Tab' && e.shiftKey) {
+        lastFocusElement.focus();
+        return false;
+    }
+};
