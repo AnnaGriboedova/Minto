@@ -556,6 +556,13 @@ body {
     font-size: 15px;
 }
 
+.notValid {
+    border-color: red; 
+    border-width: 1px; 
+    border-style: solid;
+
+}
+
 @media (max-width: 1400px) {
 
     .modalPopup {    

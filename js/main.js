@@ -45,6 +45,7 @@ const buttonModal = document.querySelector('.buttonModal');
 const cancel = document.querySelector('.modalCancel');
 const modalForm = document.querySelector('.modalForm');
 
+
 //show modal popup, block scroll and set focus on the first input
 buttonModal.addEventListener('click', () => {
     modal.style.display = 'flex';
@@ -78,3 +79,65 @@ firstFocusElement.onkeydown = function(e) {
         return false;
     }
 };
+
+// check data (validation)
+const submit = document.querySelector('.modalSubmit__input');
+
+
+submit.addEventListener('click', () => {
+
+    const name = modalForm.elements[0].value;
+    const surname = modalForm.elements[1].value;
+    const phone = modalForm.elements[2].value;
+    const mail = modalForm.elements[3].value;
+    
+    const nameInput = document.querySelector('.userInfo__nameInput');
+    const surnameInput = document.querySelector('.userInfo__surnameInput');
+    const phoneInput = document.querySelector('.userInfo__phoneInput');
+    const mailInput = document.querySelector('.userInfo__mailInput');
+
+    let isValidName = false;
+    let isValidSurname = false;
+    let isValidPhone = false;
+    let isValidMail = false;
+    
+    if (!/[A-Z][A-Za-z]+/.test(name)) {      
+        nameInput.classList.add('notValid');
+        isValidName = false;       
+    } else {       
+        nameInput.classList.remove('notValid');
+        isValidName = true;   
+    }
+
+    if (!/[A-Z][A-Za-z]+/.test(surname)) {       
+        surnameInput.classList.add('notValid');
+        isValidSurname = false;       
+    } else {  
+        surnameInput.classList.remove('notValid');
+        isValidSurname = true;
+    }
+
+    if (!/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone)) {       
+        phoneInput.classList.add('notValid');
+        isValidPhone = false;       
+    } else {        
+        phoneInput.classList.remove('notValid');
+        isValidPhone = true;
+    }
+
+    if (!/^(|(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6})$/i.test(mail)) {      
+        mailInput.classList.add('notValid');
+        isValidMail = false;       
+    } else {       
+        mailInput.classList.remove('notValid');
+        isValidMail = true;   
+    }
+    
+    if (isValidName && isValidSurname && isValidPhone && isValidMail) {
+        modalForm.submit();
+    } else {
+        event.preventDefault();
+    }
+
+    }
+);
