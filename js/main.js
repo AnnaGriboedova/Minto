@@ -101,7 +101,7 @@ submit.addEventListener('click', () => {
     let isValidPhone = false;
     let isValidMail = false;
     
-    if (!/[A-Z][A-Za-z]+/.test(name)) {      
+    if ((!/[A-Z][A-Za-z]+/.test(name)) || (/[0-9.,@]/.test(name))) {      
         nameInput.classList.add('notValid');
         isValidName = false;       
     } else {       
@@ -109,7 +109,7 @@ submit.addEventListener('click', () => {
         isValidName = true;   
     }
 
-    if (!/[A-Z][A-Za-z]+/.test(surname)) {       
+    if (!/[A-Z][A-Za-z]+\w/.test(surname)) {       
         surnameInput.classList.add('notValid');
         isValidSurname = false;       
     } else {  
