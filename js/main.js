@@ -109,7 +109,7 @@ submit.addEventListener('click', () => {
         isValidName = true;   
     }
 
-    if (!/[A-Z][A-Za-z]+\w/.test(surname)) {       
+    if ((!/[A-Z][A-Za-z]+/.test(surname)) || (/[0-9.,@]/.test(surname))) {       
         surnameInput.classList.add('notValid');
         isValidSurname = false;       
     } else {  
