@@ -27,7 +27,7 @@
                 <a href="#">
                             <span class="header__itemIcon" style="background-image: url(assets/img/Header/icon3.png)"></span>Services
                 </a>
-                <a href="#">
+                <a href="#" class="buttonModal">
                             <span class="header__itemIcon" style="background-image: url(assets/img/Header/icon4.png)"></span>Contact Us
                 </a>
             </nav>
@@ -118,6 +118,40 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal" inert>      
+      <div class="modalPopup">        
+        <div class="modalCancel"><p>&times;</p></div>
+        <form class="modalForm" name="modalForm" action="" method="post">       
+          <div class="userInfo">            
+            <div class="userInfo__names">             
+              <div class="userInfo__name">               
+                <input class="userInfo__nameInput input" type="text" placeholder="Name *" maxlength="30" required>
+              </div>
+              <div class="userInfo__surname">               
+                <input class="userInfo__surnameInput input" type="text" placeholder="Surname *" maxlength="30" required>
+              </div>  
+            </div>
+            <div class="userInfo__contacts">              
+              <div class="userInfo__phone">                
+                <input class="userInfo__phoneInput input" type="text" placeholder="Phone *" maxlength="30" required>              
+              </div>
+              <div class="userInfo__mail">               
+                <input class="userInfo__mailInput input" type="text" placeholder="E-mail *" maxlength="20" required>    
+              </div>  
+            </div>
+          </div>
+          <div class="userText">           
+            <textarea class="textarea" rows="5" cols="30" name="userText" placeholder="Message text" maxlength="500"></textarea>            
+          </div>
+          <div class="modalSubmit">
+            <input class="modalSubmit__input input" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    
 </div>
+
 </body>
 </html>

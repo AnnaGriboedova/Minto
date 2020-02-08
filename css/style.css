@@ -447,10 +447,142 @@ body {
 }
 .header__itemIcon {
     display: inline-block;
-background: no-repeat center;
+    background: no-repeat center;
     margin-right: 5px;
     width: 20px;
     height: 20px;
+}
+
+/*modal popup block*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;   
+    height: 100%;
+    font-family: "Segoe UI", sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: rgba(232, 232, 232, 0.8);
+}
+
+.modalPopup {
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+    height: 360px;   
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;   
+    background-color: rgba(130, 105, 157, 0.8);   
+}
+
+.modalCancel {    
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    font-size: 250%;
+    cursor: pointer;    
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: auto;   
+}
+
+.userInfo__names,
+.userInfo__contacts {
+    display: flex;    
+    margin: 10px;
+    padding: auto;   
+}
+
+.userInfo__name,
+.userInfo__surname,
+.userInfo__phone,
+.userInfo__mail {
+    margin: auto;   
+}
+
+.userText,
+.modalSubmit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: auto;   
+}
+
+.input {
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    color: rgb(0, 0, 0);   
+    font-family: "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+.input::placeholder {
+    color: rgb(136, 128, 130);
+}
+
+.userText input {
+    height: 80px;
+}
+
+.modalSubmit input {
+    background-color: rgba(237, 255, 33, 1);
+    cursor: pointer;
+}
+
+.textarea {    
+    border-radius: 10px;
+    outline: none;
+    border: 0;
+    padding-left: 10px;
+    resize: none;
+    color: rgb(0, 0, 0);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 15px;
+}
+
+.notValid {
+    border-color: red; 
+    border-width: 1px; 
+    border-style: solid;
+
+}
+
+@media (max-width: 1400px) {
+
+    .modalPopup {    
+        height: 450px;   
+    }
+
+    .userInfo {
+        align-items: center;
+    }
+
+    .userInfo__names,
+    .userInfo__contacts {
+        flex-direction: column;
+    }
+
+    .userInfo__name,
+    .userInfo__phone {
+        margin: 5px auto;        
+    }
+
 }
 
 @media screen and (max-width: 1080px) {
@@ -466,6 +598,11 @@ background: no-repeat center;
     .about__image {
         display: none;
     }
+
+    .modalPopup {
+        width: 40%;    
+    }
+
 }
 
 @media all and (max-width: 480px) {
@@ -497,7 +634,8 @@ background: no-repeat center;
         font-size: 17px;
         line-height: 1.5em;
     }
+
+    .modalPopup {
+        width: 200px;    
+    }
 }
-
-
-
